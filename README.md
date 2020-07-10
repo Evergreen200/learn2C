@@ -1,2 +1,5 @@
 # learn2C
-Project to learn C and improve my skills. 
+Repository to learn C and improve my skills. 
+
+Projects:
+1. TicTacToe
