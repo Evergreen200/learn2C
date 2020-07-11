@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "conio.h"
+//#include "conio.h"
 #define LINUX 1
 //#define WINDOWS 1
 
@@ -57,7 +57,8 @@ int main(void) {
             printf("Invalid move ");
 
             player--;
-            getch();
+            //getch();
+            getchar();
         }
         i = checkwin();
         player++;
@@ -67,12 +68,12 @@ int main(void) {
     board();
 
     if (i == 1) {
-        printf("==>\aPlayer %d win ", --player);
+        printf("==>\a Player %d win \n", --player);
     } else {
-        printf("==>\aGame draw");
+        printf("==>\a Game draw\n");
     }
-    getch();
-
+    //getch();
+    getchar();
     return 0;
 
 }
@@ -106,10 +107,10 @@ int checkwin(void) { if (square[1] == square[2] && square[2] == square[3]){
 void board(void) {
     console_clean_screen();
     printf("\n\nTic Tac Toe\n\n");
-    printf("Player 1 (X) - Player 2 (O)");
+    printf("Player 1 (X) - Player 2 (O)\n");
     
     printf("     |     |     \n");
-    printf(" %c   |  %c  |  %c  \n", square[1], square[2], square[3]);
+    printf("  %c  |  %c  |  %c  \n", square[1], square[2], square[3]);
 
     printf("_____|_____|_____\n");
     printf("     |     |     \n");
