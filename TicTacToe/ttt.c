@@ -68,9 +68,9 @@ int main(void) {
     board();
 
     if (i == 1) {
-        printf("==>\a Player %d win \n", --player);
+        printf("==> Player %d win \n", --player);
     } else {
-        printf("==>\a Game draw\n");
+        printf("==> Game draw\n");
     }
     //getch();
     getchar();
@@ -79,7 +79,8 @@ int main(void) {
 }
 
 
-int checkwin(void) { if (square[1] == square[2] && square[2] == square[3]){
+int checkwin(void) { 
+    if (square[1] == square[2] && square[2] == square[3]){
         return 1;
     } else if (square[4] == square[5] && square[5] == square[6]) {
         return 1;
@@ -105,6 +106,7 @@ int checkwin(void) { if (square[1] == square[2] && square[2] == square[3]){
 }
 
 void board(void) {
+
     console_clean_screen();
     printf("\n\nTic Tac Toe\n\n");
     printf("Player 1 (X) - Player 2 (O)\n");
